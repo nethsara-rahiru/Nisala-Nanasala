@@ -1,0 +1,265 @@
+html{
+    background: linear-gradient(to top, #191919, #2c2c2c);
+}
+body {
+    margin:0;
+    display: grid;
+    align-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(54,54,34);
+  position: fixed;
+  top: 0;
+  width: 100%;
+    font-family: sans-serif;
+}
+
+li {
+  float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    transition: all 0.9s ease;
+}
+
+li a:hover:not(.active1) {
+    background-color: #111;
+    transition: all 0.5s ease;
+}
+
+.active1 {
+  background-color: rgb(255,116,0);
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: .1} 
+    100% {opacity: 1}
+}
+
+@keyframes fade {
+    0% {opacity: .1} 
+    100% {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px;}
+}
+.con1{
+    width: 85%;
+    margin: auto;
+    height: 65vh;
+}
+.con2{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(to top, #2c2c2c, #191919);
+}
+.con3{
+    height: 100vh;
+    width: 100%;
+}
+.space{
+    padding-top: 49px;
+    width: 100%;
+}
+.sir{
+    border-radius: 100px;
+    border-style: solid;
+    border-color: rgb(255,116,0);
+    border-width: thick;
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+    float: left;
+}
+.box1{
+    background-color: rgba(255,116,0,0.3);
+    padding: 1%;
+    margin-top: 5%;
+    display: table;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    border-top: 1px solid rgba(255,116,0, 0.5);
+    border-left: 1px solid rgba(255,116,0, 0.5);
+    width: 100%;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 116, 0, 0.1);
+    padding-bottom: 50px;
+}
+
+.titel{
+    float: left;
+    background-color: rgb(69,57,45);
+    width: 54%;
+    padding: 1%;
+    padding-left: 5%;
+    color: antiquewhite;
+    border-left-style: solid;
+    border-left-width: thick;
+    border-left-color: rgb(255,116,0);
+    margin-top: 9%;
+}
+h4{
+    color: rgb(255,116,0);
+}
+h2{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+.dis{
+    margin-top: 2%;
+    padding: 2%;
+    background-color: rgb(69,57,45);
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-left-style: solid;
+    border-left-width: thick;
+    border-left-color: rgb(255,116,0);
+    color: antiquewhite;
+    margin-bottom: 1%;
+}
+.bottom{
+    bottom: 0px;
+    color: aliceblue;
+    background-color: rgb(15,15,15);
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    margin-top: 5%;
+}
+.bottom.active{
+    background-color: aqua;
+    transition: all 0.5s ease;
+    
+}
+@media (max-width : 700px)
+{
+    .titel{
+        width: 80%;
+        float: none;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 2%;
+    }
+    .dis{
+        margin-bottom: 2%;
+    }
+    .sir{
+        float: none;
+        
+        margin-left: 18%;
+    }
+    li {
+        font-size: 10px;
+    }
+}
+.tit{
+    width: 85%;
+    margin-left: 15%;
+    text-align: left;
+    color: white;
+}
+.txt{
+    color: rgb(255,116,0);
+    width: 70%;
+    margin-left: 20%;
+    margin-right: 10%;
+    text-align: left;
+}
+h3{
+    margin-bottom: 40px;
+}
+.fade {
+    opacity: 0;
+    transition: opacity 2.5s ease;
+}
+
+.fade.animate {
+    opacity: 1;
+}
+
+.pushright {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 2.5s ease, transform 2.5s ease;
+    }
+
+
+    .pushright.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }

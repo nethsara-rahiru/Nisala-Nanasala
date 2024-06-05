@@ -1,0 +1,51 @@
+<html>
+    <link rel="stylesheet" href="Contactcss.css">
+    <body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">Our Courses</a></li>
+            <li><a href="#contact">Staff & Students</a></li>
+            <li><a class="active1" href="#videos">Contact Us</a></li>
+        </ul>
+        <img src="Assets/Pic/contac/Untitled.png" class="tipic">
+        <div class="bar">
+            <div class="u">
+                <p class="name">Nisala Nanasala</p>
+                <p class="loc">(Udubaddhawa)</p>
+            </div>
+            <div class="k">
+                <p class="name">Futuer Tec</p>
+                <p class="loc">(Kuliyapitiya)</p>
+            </div>
+        </div>
+        <h1 id="text">hello</h1>
+        <script>
+            const bar = document.querySelector('.k');
+            const bar2 = document.querySelector('.u');
+            var count = 0;
+                    const effect = () => {
+                        if (count == 0)
+                        {
+                            document.getElementById('text').innerHTML = "12";
+                            bar.classList.toggle('active');
+                            bar2.classList.toggle('active');
+                            count = 1;
+                        }
+                    }
+                    bar.addEventListener('click', effect);
+            
+                    const effect2 = () => {
+                        if (count == 1)
+                        {
+                            document.getElementById('text').innerHTML = "34";
+                            bar.classList.toggle('active');
+                            bar2.classList.toggle('active');
+                            count = 0;
+                        }
+                    }
+                    bar2.addEventListener('click', effect2);
+        </script>
+    </body>
+</html>

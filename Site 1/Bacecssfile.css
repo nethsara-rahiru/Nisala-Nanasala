@@ -1,0 +1,41 @@
+html{
+    background: linear-gradient(to top, #191919, #2c2c2c);
+}
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(54,54,34);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      font-family: sans-serif;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active1) {
+    background-color: #111;
+    transition: all 0.5s ease;
+}
+
+.active1 {
+  background-color: rgb(255,116,0);
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}

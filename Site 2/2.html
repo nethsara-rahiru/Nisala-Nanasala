@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nisala Nanasala</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+        body {
+
+            margin: 0;
+
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+	    margin-left: auto;
+	    margin-right: auto;
+	
+        }
+
+
+	 h2{
+	    margin-top: 150px;
+}
+ 
+
+        header {
+
+            background-color: #292929;
+
+            padding: 10px 0; /* Reduced padding for smaller height */
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden; /* Ensure the container clears floated elements */
+
+        }
+
+
+        header h1 {
+
+            float: left;
+            margin: 0;
+            color: #ff6600;
+            font-size: 2em; /* Reduced font size for smaller height */
+            font-weight: 700;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 15px; /* Reduced margin for smaller height */
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1em; /* Reduced font size for smaller height */
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+            text-shadow: 0 0 5px #ff6600;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow img.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e65c00;
+            transform: scale(1.05);
+        }
+
+        
+section {
+
+            
+padding: 0px 0; /* Remove this line to remove padding from all sections */
+
+        }
+
+
+        .course-list {
+
+            display: flex;
+
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+        }
+
+
+	form{
+	    width: 70%;
+
+  	    margin-left: 10%;
+ 	    margin-right: 10%;
+}
+        .course {
+
+            width: 45%;
+
+            background-color: #333333;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        }
+
+
+        .course:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+        }
+
+
+        .course h3 {
+
+            margin-top: 0;
+
+            color: #ff6600;
+
+            font-weight: 700;
+
+        }
+
+
+        footer {
+
+            background-color: #292929;
+
+            text-align: center;
+
+            padding: 20px 0;
+
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+
+	    margin-top: 300px;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444444;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            background-color: #555555;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6600;
+            color: #ffffff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #e65c00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nisala Nanasala</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="slideshow">
+            <img src="slide1.jpg" class="active" alt="Slide 1">
+            <img src="slide2.jpg" alt="Slide 2">
+            <img src="slide3.jpg" alt="Slide 3">
+        </div>
+        <div class="hero-content">
+            <h2>Welcome to Nisala Nanasala</h2>
+            <p>We offer top-notch courses in Computer Science and English.</p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </section
+>
+    <section id="courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <div class="course">
+                    <h3>Computer Science</h3>
+                    <p>Learn the latest in software development, data science, and more.</p>
+                </div>
+                <div class="course">
+                    <h3>English</h3>
+                    <p>Improve your English skills for better communication and career opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        
+<div class="container">
+        <h2>About Us</h2>
+        <p>Nisala Nanasala is a leading institute dedicated to providing quality education in technology and language arts. Our mission is to empower individuals with the skills and knowledge they need to succeed in today's fast-paced world. With experienced instructors, state-of-the-art facilities, and a supportive learning environment, we strive to help our students reach their full potential.</p>
+        <p>At Nisala Nanasala, we offer a wide range of courses, including computer science, data science, web development, English language proficiency, and more. Whether you're looking to advance your career or pursue a new passion, we have something for everyone.</p>
+        <p>Join us and embark on a journey of learning and discovery. Let's shape the future together!</p>
+    </div>
+    </section>
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2>Contact Us</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container">
+
+            <p>&copy; 2024 Nisala Nanasala. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav a');
+            for (const link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Slideshow functionality
+            const slides = document.querySelectorAll('.slideshow img');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 3000);
+        });
+    </script>
+
+</body>
+
+</html>
+

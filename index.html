@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creatives</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #222; /* Dark background color */
+        color: white;
+        font-size: 20px;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        font-family: Arial, sans-serif; /* Use a different font */
+    }
+
+    .container {
+        margin-top: 80px; /* Space below the header */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 60vw; /* 60% of the viewport width */
+        height: 100px;
+        background-color: #333; /* Dark theme color */
+        margin: 10px;
+        display: flex;
+        justify-content: flex-start; /* Align content to the left */
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.5s, background-color 0.5s; /* Slower hover effect */
+        border-radius: 10px; /* Rounded corners */
+        padding-left: 20px; /* Add padding to create space for the icon */
+        position: relative;
+    }
+
+    .box:before {
+        content: '';
+        position: absolute;
+        left: 10px; /* Adjust the position of the icon */
+        top: 50%;
+        width: 20px; /* Width of the icon */
+        height: 25px; /* Height of the icon */
+        border-left: 2px solid white; /* Adjust the thickness and color of the lines */
+        border-top: 2px solid white;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transform: translateY(-50%) rotate(-45deg); /* Rotate the lines to create a document icon */
+    }
+
+    .box:hover {
+        background-color: #555; /* Lighter color on hover */
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Creatives</h1>
+
+    <div class="container">
+
+        <div class="box" onclick="window.location.href='2.html'"><div class="overlay"></div>Basic Site (Light)</div>
+
+        <div class="box" onclick="window.location.href='3.html'"><div class="overlay"></div>Basic Site (Dark)</div>
+
+        <div class="box" onclick="window.location.href='4.html'"><div class="overlay"></div>Advance Site</div>
+
+        <div class="box" onclick="window.location.href='5.html'"><div class="overlay"></div>Morden Site</div>
+
+    </div>
+
+</body>
+</html>
